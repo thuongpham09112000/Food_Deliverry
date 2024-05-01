@@ -1,0 +1,32 @@
+{
+  "name": "food-delivery-backend",
+  "version": "1.0.0",
+  "description": "A backend server for a food delivery application",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start",
+    "setup-db": "node database/setupDatabase.js",
+    "test": "node config/testConnection.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thuongpham09112000/Food-Deliverry.git"
+  },
+  "keywords": [
+    "food",
+    "delivery",
+    "backend",
+    "nodejs",
+    "express"
+  ],
+  "author": "thuongpham09112000",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thuongpham09112000/Food-Deliverry/issues"
+  },
+  "homepage": "https://github.com/thuongpham09112000/Food-Deliverry#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  }
+}
