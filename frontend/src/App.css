@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+
+.app {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.app-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.siebar_left {
+}
+
+.main {
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

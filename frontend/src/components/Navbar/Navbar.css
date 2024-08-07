@@ -1,0 +1,120 @@
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.search {
+  width: 60%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--whiteColor);
+  border-radius: 20px;
+}
+
+.search input {
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+.search-btn {
+  background-color: var(--secondaryColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: 20px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.search:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.search-btn:hover {
+  background-color: var(--primaryColor);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.profile .cart {
+  color: #fff;
+  margin-left: 10px;
+  position: relative;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  min-width: 300px;
+  background-color: var(--primaryColor);
+  color: var(--blackColor);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.profile-dropdown p {
+  margin: 0;
+  padding: 10px;
+  background-color: var(--primaryColor);
+  /* border-bottom: 1px solid var(--darkGreyColor); */
+  color: var(--whiteColor);
+  font-weight: bold;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 10px;
+  color: var(--whiteColor);
+  text-decoration: none;
+  /* border-bottom: 1px solid var(--greyColor); */
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown p:hover {
+  background-color: var(--greyColor);
+  color: var(--primaryColor);
+}
+
+.user:hover .profile-dropdown {
+  display: block;
+}
+
+.user {
+  position: relative;
+  cursor: pointer;
+}
+.cart,
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--whiteColor);
+  font-size: 20px;
+  color: var(--primaryColor);
+  text-decoration: none;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.cart:hover,
+.user:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: var(--secondaryColor);
+}
