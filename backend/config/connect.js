@@ -25,9 +25,9 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'csdl_fooddelivery',
+    database: 'DB_DeliveryFood',
     port: '3306',
-    timeout: 30000
+    connectTimeout: 30000
 });
 
 connection.connect((err) => {
@@ -35,7 +35,7 @@ connection.connect((err) => {
         console.error('Lỗi kết nối: ', err);
         return;
     }
-    console.log('Kết nối đến MySQL trên Amazon RDS thành công!');
+    console.log('Kết nối đến MySQL thành công!');
 });
 
 module.exports = connection;
