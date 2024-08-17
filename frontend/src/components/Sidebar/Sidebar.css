@@ -40,3 +40,7 @@
   background-color: var(--secondaryColor);
   border-radius: 50px;
 }
+
+.sidebar-logout a {
+  display: none;
+}

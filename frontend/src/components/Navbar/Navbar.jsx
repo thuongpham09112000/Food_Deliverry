@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -13,17 +14,18 @@ const Navbar = () => {
         {/* <a href="#" className="cart">
           <ion-icon name="cart-outline"></ion-icon>
         </a> */}
-
-        <div className="user">
-          <ion-icon name="person-outline"></ion-icon>
-          <label> Tài khoản</label>
-          <div className="profile-dropdown">
-            <p>Tên người dùng</p>
-            <a href="#">Thông tin cá nhân</a>
-            <a href="#">Lịch sử mua hàng</a>
-            <a href="#">Đăng xuất</a>
+        <Link to="/login">
+          <div className="user">
+            <ion-icon name="person-outline"></ion-icon>
+            <label> Tài khoản</label>
+            {/* <div className="profile-dropdown">
+              <p>Tên người dùng</p>
+              <a href="#">Thông tin cá nhân</a>
+              <a href="#">Lịch sử mua hàng</a>
+              <a href="#">Đăng xuất</a>
+            </div> */}
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

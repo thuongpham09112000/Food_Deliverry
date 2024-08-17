@@ -1,3 +1,4 @@
+// controllers/AuthController.js
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const UserModel = require('../models/UserModel');
@@ -13,7 +14,8 @@ exports.register = async (req, res) => {
         // Tạo một đối tượng User từ UserModel
         const user = new UserModel(username, email, hashedPassword);
 
-        // Lưu user vào cơ sở dữ liệu (chưa implement)
+        // Lưu user vào cơ sở dữ liệu
+        await UserModel.save(user);
 
         res.status(201).json({ message: 'User registered successfully' });
     } catch (error) {
@@ -27,15 +29,12 @@ exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        // Tìm kiếm người dùng theo email (chưa implement)
+        // Tìm kiếm người dùng theo email
+        const user = await UserModel.findByEmail(email);
 
-        // Mock user data
-        const user = {
-            id: 1,
-            username: 'exampleUser',
-            email: 'example@example.com',
-            password: '$2b$10$0LJdEmH06ZqNdxm9W5ORUubQ15mZps95A5MZn5X2EjP6TKgVLy3Gu' // hashed password
-        };
+        if (!user) {
+            return res.status(401).json({ message: 'Email or password is incorrect' });
+        }
 
         // So sánh mật khẩu
         const isPasswordValid = await bcrypt.compare(password, user.password);

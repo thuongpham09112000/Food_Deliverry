@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000'; // URL của backend API
+const API_URL = 'http://localhost:5000'; // URL của backend API
 
 const AuthService = {
     login: async ({ email, password }) => {
